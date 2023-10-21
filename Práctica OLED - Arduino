@@ -3,10 +3,10 @@
 #include <Adafruit_SSD1306.h>
 
 
-Adafruit_SSD1306 display(-1);
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
 
-#define DIS_WIDTH 128 // OLED display width, in pixels
-#define DIS_HEIGHT 64 // OLED display height, in pixels
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 #define IMG_HEIGHT   128
 #define IMG_WIDTH    64
