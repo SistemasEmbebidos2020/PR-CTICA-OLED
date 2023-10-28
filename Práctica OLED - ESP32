@@ -9,7 +9,7 @@
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
-#define IMG_HEIGHT   128
+#define IMG_HEIGHT   64
 #define IMG_WIDTH    64
 
 // 'logo-espol', 64x64px
@@ -79,8 +79,8 @@ void setup(){
   delay(2000); // Pausa de 2 segundos
 
   // Mostrar la imagen al inicio
-  int xOffset = (DIS_WIDTH - IMG_WIDTH) / 2;
-  int yOffset = (DIS_HEIGHT - IMG_HEIGHT) / 2 + 10; // Mueve la imagen 10 píxeles hacia abajo
+  int xOffset = (SCREEN_WIDTH - IMG_WIDTH) / 2;
+  int yOffset = (SCREEN_HEIGHT - IMG_HEIGHT) / 2 + 10; // Mueve la imagen 10 píxeles hacia abajo
 
   display.clearDisplay();
 
