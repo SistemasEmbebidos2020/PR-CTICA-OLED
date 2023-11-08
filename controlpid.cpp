@@ -41,10 +41,6 @@ double elapsedTime;
 
 float calculatePID()
 {
-
-  currentTime = millis();
-  elapsedTime = currentTime - previousTime;
-
   float error = setpoint - input;
   integral += error;
   float derivative = (error - error_prev);
