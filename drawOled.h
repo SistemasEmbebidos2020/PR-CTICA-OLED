@@ -105,15 +105,20 @@ void printoled(float v1, float v2, float v3)
   pantalla.clearDisplay();
   pantalla.setCursor(5, 5);
   pantalla.print("Sp");
-  pantalla.setCursor(30, 5);
+  pantalla.setCursor(35, 5);
   pantalla.print(v1);
-  pantalla.setCursor(5, 25);
+  pantalla.setCursor(5, 20);
   pantalla.print("PV");
-  pantalla.setCursor(30, 25);
+  pantalla.setCursor(35, 20);
   pantalla.print(v2);
-  pantalla.setCursor(5, 45);
+  pantalla.setCursor(5, 35);
   pantalla.print("Pwm");
-  pantalla.setCursor(30, 45);
+  pantalla.setCursor(35, 35);
   pantalla.print(v3);
+  pantalla.setCursor(5, 50);
+  pantalla.print("volt");
+  pantalla.setCursor(35, 50);
+  pantalla.print(v3/255.0*3.3);
+
   pantalla.display();
 }
