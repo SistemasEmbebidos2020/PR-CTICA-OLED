@@ -16,7 +16,6 @@ board = featheresp32
 framework = arduino
 monitor_speed = 115200
 lib_deps = 
-	milesburton/DallasTemperature@^3.11.0
 	adafruit/Adafruit GFX Library@^1.11.5
 	adafruit/Adafruit SSD1306@^2.5.7
 */
