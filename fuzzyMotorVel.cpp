@@ -13,7 +13,6 @@ lib_deps =
 
 #include <Ticker.h>           // Librería de interrupciones
 #include "fuzzy.h"
-#include "tsclab_lib.h"      // Librería para funciones tsclab
 
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -33,6 +32,14 @@ const int Yinit = 16;        // se define el valor inicial en Y para la gráfica
 static int xinit = 3;        // se define el valor inicial en X para la gráfica
 static int prevX, prevY = 0; // se define valor en cero paraa utilizarse mas adelante
 
+void actualiza_vectores(float v[],int kT){
+   // float v: El vector que deseamos desplazar (Actualizar)
+  // int kT:  Es la ultima posición del vector v
+   int i;
+   for(i=1;i<=kT;i++){
+      v[i-1]=v[i];
+   }
+}
 
 void oledinit()
 {
