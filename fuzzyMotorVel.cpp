@@ -90,7 +90,7 @@ Ticker interrupcion1;
 /*============================================================
     VARIABLES GLOBALES PARA ERROR Y LEY DE CONTROL 
   ============================================================*/
-float pwmOut =0.0;        // %PWM V_Base TIP31
+float pwmOut =0.0;        // %PWM L298N
 float vrpm=0;            // velocidad en rpm
 float w=0;              // Referencia (400 rpm a 2500 rpm)
 
