@@ -93,7 +93,7 @@ void loop()
 {
     velreq = (analogRead(34)/4095.0*1020.0) + 540;
    ledcWrite(1, 0);   		// Escribir el pwm de 0 para el pin led2 asociado al canal 1
-    ledcWrite(0, 255); 		// Escribir el pwm de 255 para el pin led1 asociado al canal 0
+    ledcWrite(0, vel); 		// Escribir el pwm de 255 para el pin led1 asociado al canal 0
     timeIni = millis();		// devuelve el tiempo en milisegundos
     if (digitalRead(sensor))	// pregunta si ha detectado por lo menos una vez el pulso del sensor para ingresar al conteo
     {
