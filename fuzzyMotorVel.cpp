@@ -103,7 +103,7 @@ int kE = sizeof(e)/sizeof(float)-1;   // e[kE] es el error actual
     DEFINICIONES GLOBALES CONTROL FUZZY-MAMDANI
               UNIVERSO DEL DISCURSO
   ============================================================*/
-float discurso_e = 1560, discurso_de = 1000, discurso_u = 10; //2500 en vez de 1560
+float discurso_e = 2400, discurso_de = 1000, discurso_u = 10; //2400
 float der;       // Almacenar derivada del  discreta
 float lu;       // Almacenar ley de control
 int Ts = 1;    // Periodo de Muestreo para calculo de derivada discreta
