@@ -11,8 +11,8 @@
 Adafruit_SSD1306 pantalla(ANCHO_PANTALLA, ALTO_PANTALLA, &Wire, -1);
 
 int sensor = 15;
-int Led1 = 2;
-int Led2 = 4;
+int in1 = 2;
+int in2 = 4;
 int resolution = 8;
 int cnt = 0;
 long timeIni;
@@ -50,14 +50,14 @@ void printoled(String txt, float v1, float v2)
 void setup()
 {
     pinMode(sensor, INPUT);	// se establece el pin sensor como entrada
-    pinMode(Led1, OUTPUT);	// se establece el pin led1 como salida	
-    pinMode(Led2, OUTPUT);	// se establece el pin led2 como salida
+    pinMode(in1, OUTPUT);	// se establece el pin led1 como salida	
+    pinMode(in2, OUTPUT);	// se establece el pin led2 como salida
     Serial.begin(115200);	// se inicializa la comunicacion serial a 115200 baudios
     oledinit();			// se llama a la función que establece los parámetros iniciales de la oled
     ledcSetup(0, 5000, resolution); // Canal 0, frecuencia de 5 kHz con resolución de 8bits
-    ledcAttachPin(Led1, 0);	//se enlaza el canal 0 con el pin led1
+    ledcAttachPin(in1, 0);	//se enlaza el canal 0 con el pin led1
     ledcSetup(1, 5000, resolution); // Canal 1, frecuencia de 5 kHz con resolución de 8bits
-    ledcAttachPin(Led2, 1);	//se enlaza el canal 1 con el pin led2
+    ledcAttachPin(in2, 1);	//se enlaza el canal 1 con el pin led2
 }
 void loop()
 {
