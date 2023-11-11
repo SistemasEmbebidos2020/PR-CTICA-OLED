@@ -32,16 +32,15 @@ DallasTemperature sensors(&oneWire);
 /****************************************
  * Define Constants
  ****************************************/
-const char *UBIDOTS_TOKEN = "BBFF-4ZN0fAigkVtNVUmZgPJ0oxHaKVN05r";  // Put here your Ubidots TOKEN
-const char *WIFI_SSID = "XTRIM_TORRES";      // Put here your Wi-Fi SSID
-const char *WIFI_PASS = "0921177333";      // Put here your Wi-Fi password
+const char *UBIDOTS_TOKEN = "BBFF-8OP0fAigkVtNVUmZgPJ0oxHaKVN05r";  // Put here your Ubidots TOKEN
+const char *WIFI_SSID = "SSID";      // Put here your Wi-Fi SSID
+const char *WIFI_PASS = "clave";      // Put here your Wi-Fi password
 const char *DEVICE_LABEL = "Demo";   // Put here your Device label to which data  will be published
 const char *VARIABLE_LABEL = "Temperatura"; // Put here your Variable label to which data  will be published
 
 const int PUBLISH_FREQUENCY = 2000; // Update rate in milliseconds
 
 unsigned long timerpass;
-uint8_t analogPin = 34; // Pin used to read data from GPIO34 ADC_CH6.
 
 Ubidots ubidots(UBIDOTS_TOKEN);
 
